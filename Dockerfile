@@ -11,7 +11,7 @@ ENV TITLE=Chromium
 
 RUN echo "**** install packages ****"
 RUN apt update
-RUN apt install chromium-browser nscd -y
+RUN apt install chromium-browser nscd avahi-utils -y
 RUN echo "**** cleanup ****"
 RUN rm -rf /tmp/*
 
