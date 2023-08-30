@@ -9,12 +9,11 @@ LABEL maintainer="thelamer"
 # title
 ENV TITLE=Chromium
 
-RUN \
-  echo "**** install packages ****" && \
-  apt install chromium-browser nscd \
-  echo "**** cleanup ****" && \
-  rm -rf \
-    /tmp/*
+RUN echo "**** install packages ****"
+RUN apt update
+RUN apt install chromium-browser nscd
+RUN echo "**** cleanup ****"
+RUN  rm -rf /tmp/*
 
 # add local files
 COPY /root /
