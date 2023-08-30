@@ -1,4 +1,4 @@
-FROM ghcr.io/linuxserver/baseimage-kasmvnc:alpine318
+FROM ghcr.io/linuxserver/baseimage-kasmvnc:ubuntujammy
 
 # set version label
 ARG BUILD_DATE
@@ -11,8 +11,7 @@ ENV TITLE=Chromium
 
 RUN \
   echo "**** install packages ****" && \
-  apk add --no-cache \
-    chromium && \
+  apt install chromium-browser \
   echo "**** cleanup ****" && \
   rm -rf \
     /tmp/*
