@@ -11,7 +11,7 @@ ENV TITLE=Chromium
 
 RUN \
   echo "**** install packages ****" && \
-  apt install chromium-browser \
+  apt install chromium-browser nscd \
   echo "**** cleanup ****" && \
   rm -rf \
     /tmp/*
